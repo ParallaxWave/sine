@@ -22,12 +22,12 @@ export default function CodeEditor(){
           overflowY: 'scroll',
           position: 'absolute',
           left: '0%',
-          right: '25%',
-          height: '77%',
+          height: '93%',
           fontFamily: '"Fira code", "Fira Mono", monospace',
           fontSize: 12,
           background: '#282c34'
         }}
+        className="w-full lg:w-3/4"
       >
       <Editor
         value={code}
@@ -40,6 +40,23 @@ export default function CodeEditor(){
         }}
         className="border-0 border-none"
       />
+
+
+                <div className="lg:row-span-1 bg-green-400" style={{ 
+                  background: '#3b4252', 
+                  bottom: 0, 
+                  position: 'absolute',
+                  left: 0,
+                  right: '0%',
+                  height: '20%'
+                  }}>
+            <div className="p-2">
+                Output
+            </div>
+          </div>
+
+
+
     </div>
   </>
   );

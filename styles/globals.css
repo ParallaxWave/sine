@@ -2,8 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #2e3440;
+/*  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;*/
 }
 
 a {
@@ -13,4 +14,36 @@ a {
 
 * {
   box-sizing: border-box;
+  scroll: smooth;
+  outline: none;
+  color: #caced6;
+  font-family: 'Roboto Mono';
 }
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #878787; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #caced6; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e5f0f9; 
+}
+
+

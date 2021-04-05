@@ -1,6 +1,21 @@
+import { useState } from 'react';
+
 export default function ChatInput(props){
+
+  const [msg, setMsg] = useState('');
+
+  const sendMsg = e => {
+    e.preventDefault();
+    if(!(msg === null || msg.match(/^ *$/) !== null)){
+      console.log(msg);
+      props.onSend(msg);
+      setMsg('');
+    }
+  };
+
   return (
     <>
+        <form onSubmit={e => sendMsg(e)}>
               <div className="flex">
           <div style={{
               position: 'absolute',
@@ -16,10 +31,13 @@ export default function ChatInput(props){
                  }}
                 placeholder="Message..." 
                 className="flex-grow"
+                value={msg}
+                onChange={newMsg => setMsg(newMsg.target.value)}
             />
             <button className="material-icons focus:outline-none" style={{ fontSize: 24 }}>send</button>
           </div>
         </div>
+    </form>
 
     </>
   );
